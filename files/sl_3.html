@@ -1,0 +1,49 @@
+
+<a class='thumb' id='3390259131' title='5 camellia buds | 2000 | oil on canvas | 17"x19"'><img src='http://farm4.static.flickr.com/3617/3390259131_18db5ddcc4_s.jpg'></a> 
+
+<a class='thumb' id='3391070558' title='3 camellia buds | 1999 | oil on canvas | 17"x19"'><img src='http://farm4.static.flickr.com/3643/3391070558_f7586ae75b_s.jpg'></a> 
+
+<div id='thumb_nav'><span id='prev' class='nav'>previous</span></div>
+
+
+<script>
+    $('#prev').click(function(){
+        $('#big_image').fadeOut('slow', function(){
+        
+        $('#thumbnails').load('files/sl_2.html', function(){
+        
+        
+            $('<img />').attr('src', 'http://farm4.static.flickr.com/3427/3391070782_c72a641463.jpg').load(function(){
+                    $('#big_image').html(this);
+                    $('#big_image').append("<span class='mbf-item'>#gallery 3391070782</span><div id='desc'>3 eggshells | 2000 | oil on canvas | 17\"x19\"</div>");
+                    $('#big_image').fadeIn('slow');                
+                });
+        
+        
+            
+        
+            $('.thumb').click(function(){
+                
+                var id = $(this).attr('id');
+                var src=$(this).children('img').attr('src');
+                var t=$(this).attr('title');                
+                $("#big_image").fadeOut('slow', function(){
+                var n=(src.replace('_s.jpg','.jpg')); 
+                $('<img />').attr('src', n).load(function(){                    
+                    var x=$(this);
+                    $('#big_image').html(x);
+                    $('#big_image').append("<span class='mbf-item'>#gallery "+id+"</span><div id='desc'>"+t+"</div>");
+                    $('#big_image').fadeIn('slow');
+                });                
+                });
+            });        
+        
+        });        
+        
+        
+        });
+
+    });
+    
+    
+</script>

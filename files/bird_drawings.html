@@ -1,0 +1,68 @@
+	
+    <div class='header'>
+    <h3>drawings: birds</h3>
+  
+    </div>
+    <div class="yui-gd" style='display:none;min-height:530px;'>
+        <div class="yui-u first">
+	        
+                           <div id="thumbnails">
+
+ </div>
+       
+        </div>
+        
+        
+        <div class="yui-u">
+            <div id='big_image'>
+	         
+
+
+            </div>
+	    </div>
+    </div>
+
+    <script>
+         $('.yui-gd').fadeIn('slow');
+    </script>
+    <script>
+
+    
+    
+    
+        $('#thumbnails').load('files/bird1.html', function(){
+
+            $('<img />').attr('src', 'http://farm4.static.flickr.com/3639/3391097280_e090033b9f.jpg').load(function(){
+                    $('#big_image').html(this);
+                    $('#big_image').append("<span class='mbf-item'>#gallery 3390251427</span><div id='desc'>bird 1 | 2006-2007 | pencil on paper | 7 1/4\"x8\"</div>");
+                    $('#big_image').fadeIn('slow');                
+                });
+        
+        
+        
+            $('.thumb').click(function(){
+                
+                var id = $(this).attr('id');
+                var src=$(this).children('img').attr('src');
+                var t=$(this).attr('title');                
+                $("#big_image").fadeOut('slow', function(){
+                var n=(src.replace('_s.jpg','.jpg')); 
+                $('<img />').attr('src', n).load(function(){                    
+                    var x=$(this);
+                    $('#big_image').html(x);
+                    $('#big_image').append("<span class='mbf-item'>#gallery "+id+"</span><div id='desc'>"+t+"</div>");
+                    $('#big_image').fadeIn('slow');
+                });                
+                });
+            });        
+        
+        });
+    </script>
+    
+
+
+    
+    
+    
+    
+    

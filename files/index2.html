@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+<link rel="alternate" href="xml/paintings_still_life.xml" type="application/rss+xml" title="" id="gallery" />
+
+
+   <link rel="shortcut icon" href="http://farm4.static.flickr.com/3599/3327732778_e3e8d57796_s.jpg">
+        <script type="text/javascript" src="http://lite.piclens.com/current/piclens.js"></script>
+   <title>d a v i d  &nbsp; &nbsp; s h r a t t e r  &nbsp; &nbsp;| &nbsp; &nbsp; d r a w i n g s  &nbsp; &nbsp; &  &nbsp; &nbsp;p a i n t i n g s </title>
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+    <script src="http://www.google.com/jsapi"></script>
+<script>
+  // Load jQuery
+  google.load("jquery", "1.2.6");
+</script>
+    
+<style>
+     html{background-color:#888888;}
+   /*  #bd{border: 2px solid black;} */
+     h1{font-size: 167%;letter-spacing: 4px;}
+     h2{font-size: 153.9%;letter-spacing: 4px;}
+     .mbf-item{display:none;}
+    
+     
+     h3{font-size: 146.5%;letter-spacing: 4px;}
+     h4{font-size: 123.1%; letter-spacing: 4px;}
+     .yui-gd{min-height:500px;}
+     #contact{text-align: right; margin-top: 1em;}
+     
+     .nav{cursor:pointer; color:#222222;}
+
+     .yui-gd{margin-top:1em;, display: none;}
+     .thumb{clear: both;width: 100px;margin-left:13px;margin-bottom: 10px;}
+      /*.home_image{margin-left:15px;}  */
+      .header{margin-left: 13px;margin-top: 2em;}
+      #big_image{margin-left: 67px;margin-bottom:2em;}
+     
+</style>   
+   
+   </head>
+<body>
+<div id="doc2" class="yui-t7">
+   <div id="hd" role="banner">
+
+     	<div class="yui-ge">
+    <div class="yui-u first">
+        <h1 class='nav' title='contact'>david shratter</h1>
+	    </div>
+    <div class="yui-u">
+<div title='contact' id='contact' class='nav'>contact</div>
+	    </div>
+</div>
+
+
+
+   
+   </div>
+   <div id="bd" role="main" >
+ 
+
+     	<div class="yui-g" style="padding-top: 1em;">
+    <div class="yui-u first" style="text-align:center;">
+                paintings: <span class='nav' title='p_sl'>still life</span>  |  <span class='nav' title='p_cs'>cityscapes</span> |  <span class='nav' title='p_ls'>landscapes</span>
+	    </div>
+    <div class="yui-u" style="text-align:center;">
+                drawings: <span class='nav' title='d_i'>interiors</span>  |  <span class='nav' title='d_cs'>cityscapes</span>  |  <span class='nav' title='d_f'>figures</span>  |  <span class='nav' title='d_p'>portraits</span>
+	    </div>
+</div>
+
+     
+     
+ <div id="content">
+     <!--
+	<div class="yui-gd">
+        <div class="yui-u first">
+	        thumbs
+	    </div>
+        <div class="yui-u">
+	        main
+	    </div>
+    </div>
+    
+    -->
+</div>
+	</div>
+    <script>
+     $('#content').load('files/contact2.html');
+    
+      $('.nav').click(function(){
+      var id=$(this).attr('title');
+      
+      var file='files/'+id+'.html';
+      /*alert(file); */
+     
+    $('#content').load(file, function(){
+        
+        
+    
+    
+    });
+
+          
+            
+      });
+    </script>
+    
+    
+    
+   <div id="ft" role="contentinfo"><p>2009 David Shratter | buy some art, bitches!</p></div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+ <meta name="verify-v1" content="a/vV4eYSFfDisMggAF2o2Jyuje0wxG6qGlF5S9H29pg=" />
+ <META NAME="description" CONTENT="The artwork of David Shratter">
+
+<META NAME="keywords" CONTENT="David Shratter, art, Portland art, Shratter">
+ 
+ <link rel="alternate" href="xml/paintings_still_life.xml" type="application/rss+xml" title="" id="gallery" />
+<link rel="alternate" href="xml/drawings_birds.xml" type="application/rss+xml" title="" id="gallery" />
+<link rel="alternate" href="xml/drawings_cityscapes.xml" type="application/rss+xml" title="" id="gallery" />  
+<link rel="alternate" href="xml/drawings_interiors.xml" type="application/rss+xml" title="" id="gallery" />
+<link rel="alternate" href="xml/drawings_figures.xml" type="application/rss+xml" title="" id="gallery" /> 
+<link rel="alternate" href="xml/paintings_landscapes.xml" type="application/rss+xml" title="" id="gallery" />
+<link rel="alternate" href="xml/paintings_cityscapes.xml" type="application/rss+xml" title="" id="gallery" />
+<link rel="alternate" href="xml/drawings_portraits.xml" type="application/rss+xml" title="" id="gallery" />
+<link rel="shortcut icon" href="http://farm4.static.flickr.com/3599/3327732778_e3e8d57796_s.jpg">
+
+
+
+
+<script type="text/javascript" src="http://lite.piclens.com/current/piclens.js"></script>
+   <title>david shratter | drawings & paintings </title>
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+    <script src="http://www.google.com/jsapi"></script>
+<script>
+  // Load jQuery
+  google.load("jquery", "1.2.6");
+  /*
+  jQuery.preloadImages = function()
+{
+  for(var i = 0; i<arguments.length; i++)
+  {
+    jQuery("<img>").attr("src", arguments[i]);
+  }
+}
+       */
+  </script>
+                 <script type="text/javascript" src="javascript/jquery.innerfade.js"></script>
+ 
+  <link rel="stylesheet" href="/style/style.css" type="text/css">   
+   </head>
+<body>
+<div id="doc2" class="yui-t7">
+   <div id="hd" role="banner">
+
+     	<div class="yui-ge">
+    <div class="yui-u first">
+        <h1 class='nav' title='contact3'>david shratter</h1>
+	    </div>
+    <div class="yui-u">
+
+ <span title='contact3' id='hr' class='nav'>home</span> 
+ <span> | </span>
+  <span title='bio' id='hr' class='nav'>bio</span>
+	    </div>
+</div>
+
+
+
+   
+   </div>
+   <div id="bd" role="main" >
+ 
+
+     	<div class="yui-g" style="padding-top: 1em;">
+    <div class="yui-u first" style="text-align:center;">
+                paintings: <span class='nav' title='stilllife_paintings'>still life</span>  |  <span class='nav' title='cityscape_paintings'>cityscapes</span> |  <span class='nav' title='landscape_paintings'>landscapes</span>
+	    </div>
+    <div class="yui-u" style="text-align:center;">
+                drawings: <span class='nav' title='cityscape_drawings'>cityscapes</span>  |   <span class='nav' title='interior_drawings'>interiors</span>  |   <span class='nav' title='figure_drawings'>figures</span>  |  <span class='nav' title='portrait_drawings'>portraits</span>  |  <span class='nav' title='bird_drawings'>birds</span>
+	    </div>
+</div>
+
+     
+     
+ <div id="content">
+
+</div>
+	</div>
+    <script>
+    
+var _images = ['images/onions.jpg','images/salvation.jpg','images/clinton.jpg','images/figure.jpg','images/ls2.jpg','images/bird.jpg','images/david.jpg'];
+var y =0;
+$.each(_images,function(e) {
+$(new Image()).load(function() {
+y++;
+
+}).attr('src',this);
+});
+    
+    
+   // $('<img />').attr('src', 'images/onions.jpg').load(function(){ 
+     
+     $('#content').load('files/contact3.html', function(){
+            //if (y > 5){ 
+            $('#homeimages').innerfade({
+              speed: 1000,
+              timeout: 4000,
+              type: 'sequence',
+              containerheight: '437px', 
+              runningclass: 'x'
+
+            });
+     
+          //  } 
+     
+     
+     });
+     
+  //  });
+      $('.nav').click(function(){
+      var id=$(this).attr('title');
+      var file='files/'+id+'.php';
+     // var file='files/'+id+'.html';
+      /*alert(file); */
+     
+    $('#content').load(file, function(){
+        
+            $('#homeimages').innerfade({
+              speed: 750,
+              timeout: 4000,
+              type: 'sequence',
+              containerheight: '300px', 
+              runningclass: 'x'
+
+            });        
+    
+    
+    });
+
+          
+            
+      });
+    </script>
+    
+    
+    
+   <div id="ft" role="contentinfo" >
+       <div class="yui-gc">
+           <div class="yui-u first">
+           <p style="margin-left:15px;"><a href='mailto:dshratter@gmail.com'>dshratter@gmail.com</a><br><span style="font-size:77%;margin-top: 0.3em;">All images Copyright David Shratter- All rights reserved</span></p>
+           </div>
+           
+           <div class="yui-u">
+           <p style="text-align: right; font-size:77%;">images on <a href='http://www.flickr.com/photos/davidshratter/' target='_blank'>Flickr</a> </p>
+           <p style="text-align: right; font-size:77%;">web site: <a href='http://www.lclark.edu/~jeremym/' target='_blank'>j.a.m.</a> </p>
+           </div>
+       
+       </div>
+
+
+   </div>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8501143-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>
+

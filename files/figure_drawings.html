@@ -1,0 +1,67 @@
+	
+    <div class='header'>
+    <h3>drawings: figures</h3>
+  
+    </div>
+    <div class="yui-gd" style='display:none;min-height:530px;'>
+        <div class="yui-u first">
+	        
+                           <div id="thumbnails">
+
+ </div>
+       
+        </div>
+        
+        
+        <div class="yui-u" id='second'>
+            <div id='big_image'>
+	         
+
+
+            </div>
+	    </div>
+    </div>
+
+    <script>
+         $('.yui-gd').fadeIn('slow');
+    </script>
+    <script>
+    $('<img />').attr('src', 'http://farm4.static.flickr.com/3628/3405807466_828be3c5e6.jpg').load(function(){
+                    $('#big_image').html(this);
+                    $('#big_image').append("<span class='mbf-item'>#gallery 3405807466</span><div id='desc'>fig.1 | 2007 | pen and ink on rice paper</div>");
+                    $('#big_image').fadeIn('slow');                
+                });
+    
+    
+    
+        $('#thumbnails').load('files/fd_1.html', function(){
+
+            $('.thumb').click(function(){
+            
+                
+                var id = $(this).attr('id');
+                var src=$(this).children('img').attr('src');
+                var t=$(this).attr('title');                
+                $("#big_image").fadeOut('slow', function(){
+                //$('#big_image').append("<img src='images/ajax-loader.gif'>", function(){
+                
+                var n=(src.replace('_s.jpg','.jpg')); 
+                $('<img />').attr('src', n).load(function(){                    
+                    var x=$(this);
+                    $('#big_image').html(x);
+                    $('#big_image').append("<span class='mbf-item'>#gallery "+id+"</span><div id='desc'>"+t+"</div>");
+                    $('#big_image').fadeIn('slow');
+                });                
+                });
+            });        
+        
+        });
+    </script>
+    
+
+
+    
+    
+    
+    
+    

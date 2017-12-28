@@ -1,0 +1,36 @@
+<a class='thumb' id='16469729367' title='Poppy 1 | 2014 | pen and ink on Kitakata paper | 7”H x 5”W'><img src='images/thumb/poppy 1.jpg'></a>
+<a class='thumb' id='16675643131' title='Poppy 2 | 2014 | pen and ink on Kitakata paper | 7”H x 5”W'><img src='images/thumb/poppy 2.jpg'></a> 
+<a class='thumb' id='16651064806' title='Poppy 3 | 2014 | pen and ink on Kitakata paper | 7”H x 5”W'><img src='images/thumb/poppy 3.jpg'></a>
+<a class='thumb' id='16489590050' title='Poppy 4 | 2014 | pen and ink on Kitakata paper | 7”H x 5”W'><img src='images/thumb/poppy 4.jpg'></a>
+<a class='thumb' id='16489584340' title='Poppy 5 | 2014 | pen and ink on Kitakata paper | 7”H x 5”W'><img src='images/thumb/poppy 5.jpg'></a>
+<a class='thumb' id='16489413668' title='Poppy 6 | 2014 | pen and ink on Kitakata paper | 7”H x 5”W'><img src='images/thumb/poppy 6.jpg'></a>
+<a class='thumb' id='16675625911' title='Poppy 7 | 2014 | pen and ink on Kitakata paper | 7”H x 5”W'><img src='images/thumb/poppy 7.jpg'></a>
+<a class='thumb' id='16054658954' title='Poppy 8 | 2014 | pen and ink on Kitakata paper | 7”H x 5”W'><img src='images/thumb/poppy 8.jpg'></a>
+<a class='thumb' id='16469702727' title='Poppy 9 | 2014 | pen and ink on Kitakata paper | 7”H x 5”W'><img src='images/thumb/poppy 9.jpg'></a>
+<a class='thumb' id='16489402778' title='Poppy 10 | 2014 | pen and ink on Kitakata paper | 7”H x 5”W'><img src='images/thumb/poppy 10.jpg'></a>
+<a class='thumb' id='16489399518' title='Poppy 11 | 2014 | pen and ink on Kitakata paper | 7”H x 5”W'><img src='images/thumb/poppy 11.jpg'></a>
+<a class='thumb' id='16489563950' title='Poppy 12 | 2014 | pen and ink on Kitakata paper | 7”H x 5”W'><img src='images/thumb/poppy 12.jpg'></a>
+<a class='thumb' id='16675607361' title='Poppy 13 | 2014 | pen and ink on Kitakata paper | 7”H x 5”W'><img src='images/thumb/poppy 13.jpg'></a>
+<a class='thumb' id='16675604211' title='Poppy 14 | 2014 | pen and ink on Kitakata paper | 7”H x 5”W'><img src='images/thumb/poppy 14.jpg'></a>
+<a class='thumb' id='16490820899' title='Poppy 15 | 2014 | pen and ink on Kitakata paper | 7”H x 5”W'><img src='images/thumb/poppy 15.jpg'></a>
+<a class='thumb' id='16469680857' title='Poppy 16 | 2014 | pen and ink on Kitakata paper | 7”H x 5”W'><img src='images/thumb/poppy 16.jpg'></a>
+<a class='thumb' id='16675595001' title='Poppy 17 | 2014 | pen and ink on Kitakata paper | 7”H x 5”W'><img src='images/thumb/poppy 17.jpg'></a>
+<a class='thumb' id='16676956305' title='Poppy 18| 2014 | pen and ink on Kitakata paper | 7”H x 5”W'><img src='images/thumb/poppy 18.jpg'></a>
+
+
+<div id='thumb_nav'><span id='next' class="nav">next</span></div>
+
+<script>
+    $('#next').click(function(){
+        $('#big_image').fadeOut('slow', function(){
+            $('#thumbnails').load('files/2015b.php', function(){        
+                var img="images/medium/poppy 19.jpg";
+                var fid="16490809469";
+                var title="Poppy 19 | 2014 | pen and ink on Kitakata paper | 7”H x 5”W";
+                <? include ("start_js.php");?> 
+                <? include ("thumb2_js.php");?>
+            });        
+        });
+    });
+    
+</script>
