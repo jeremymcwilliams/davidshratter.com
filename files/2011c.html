@@ -16,8 +16,42 @@
                 var img="images/medium/david019.jpg";
                 var fid="3391070782";
                 var title="3 eggshells | 2000 | oil on canvas | 17\"x19\"";
-                <? include ("start_js.php");?> 
-                <? include ("thumb2_js.php");?>
+            $('#big_image').html("<div style='margin-left:200px;margin-top:180px;'><img src='images/ajax-loader.gif'></div>");
+            $('#big_image').fadeIn('slow');
+            var im="<img src='"+ img +"' class='fb'>";
+            $('<img />').attr('src', img).load(function(){
+                    $('#big_image').fadeOut('fast', function(){
+                        $('#big_image').html(im);
+                        $('#big_image').append("<span class='mbf-item'>#gallery "+ fid +"</span><div id='desc'>"+ title +"</div>");
+                        $('#big_image').fadeIn('slow');
+                    });                
+                });
+
+            
+            $('.thumb').click(function(){
+                
+                    var id = $(this).attr('id');
+                    var src=$(this).children('img').attr('src');
+                    var t=$(this).attr('title');                
+                    $("#big_image").fadeOut('slow', function(){
+                    $("#big_image").html("<div style='margin-left:200px;margin-top:180px;'><img src='images/ajax-loader.gif'></div>");
+                    $("#big_image").fadeIn('slow');
+                        var n=(src.replace('thumb','medium'));
+                        var im="<img src='"+n+"'>"; 
+
+                        $('<img />').attr('src', n).load(function(){                    
+                             $("#big_image").fadeOut('fast', function(){
+                                   $('#big_image').html(im);   
+                               // $('#big_image').html($(this));
+                                    $('#big_image').append("<span class='mbf-item'>#gallery "+id+"</span><div id='desc'>"+t+"</div>");
+                                    $('#big_image').fadeIn('slow'); 
+                             });
+                             
+                            
+                        });                
+                    });
+
+            }); 
             });        
         });
     });

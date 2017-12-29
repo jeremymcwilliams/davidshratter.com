@@ -30,8 +30,42 @@
             var fid="3390257471";
             var title="Bertie Lou's | 2010 | pen and ink on rice paper | 7\"H x 5\"W";
             
-            <? #include ("start_js.php");?>
-            <? include ("thumb2_js.php");?>
+            $('#big_image').html("<div style='margin-left:200px;margin-top:180px;'><img src='images/ajax-loader.gif'></div>");
+            $('#big_image').fadeIn('slow');
+            var im="<img src='"+ img +"' class='fb'>";
+            $('<img />').attr('src', img).load(function(){
+                    $('#big_image').fadeOut('fast', function(){
+                        $('#big_image').html(im);
+                        $('#big_image').append("<span class='mbf-item'>#gallery "+ fid +"</span><div id='desc'>"+ title +"</div>");
+                        $('#big_image').fadeIn('slow');
+                    });                
+                });
+ 
+             $('.thumb').click(function(){
+                
+                    var id = $(this).attr('id');
+                    var src=$(this).children('img').attr('src');
+                    var t=$(this).attr('title');                
+                    $("#big_image").fadeOut('slow', function(){
+                    $("#big_image").html("<div style='margin-left:200px;margin-top:180px;'><img src='images/ajax-loader.gif'></div>");
+                    $("#big_image").fadeIn('slow');
+                        var n=(src.replace('thumb','medium'));
+                        var im="<img src='"+n+"'>"; 
+
+                        $('<img />').attr('src', n).load(function(){                    
+                             $("#big_image").fadeOut('fast', function(){
+                                   $('#big_image').html(im);   
+                               // $('#big_image').html($(this));
+                                    $('#big_image').append("<span class='mbf-item'>#gallery "+id+"</span><div id='desc'>"+t+"</div>");
+                                    $('#big_image').fadeIn('slow'); 
+                             });
+                             
+                            
+                        });                
+                    });
+
+            }); 
+ 
             start(img, title, fid);
         });
     </script> 
